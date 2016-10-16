@@ -13,11 +13,14 @@ import thunk from 'redux-thunk';
 const store = createStore(reducers, initialState, applyMiddleware(thunk));
 
 import Head from './componets/head/index'
+import SPAForm from './containers/spa-form'
+
 const App = ({title}) => (
   <MuiThemeProvider>
     <Provider store={store}>
       <div className='container'>
         <Head title={title} />
+        <SPAForm/>
       </div>
     </Provider>
   </MuiThemeProvider>
