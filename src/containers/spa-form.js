@@ -8,16 +8,19 @@ import Button from '../componets/button/index';
 import './spa-form.css';
 
 import { inputChanged } from '../actions/form/input';
+import { validateForm } from '../actions/form/form';
 
 export class SPAForm extends Component {
   render() {
     const {
       errors,
       inputChanged,
+      validateForm
     } = this.props;
 
     return (<form
       className="form"
+      onSubmit={validateForm}
     >
       <Input
         name="name"
@@ -51,11 +54,13 @@ export class SPAForm extends Component {
 
 const mapStateToProps = (state, ownProps) => ({
   errors: state.form.errors,
+  values: state.form.values
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
     inputChanged: (name, value) => dispatch(inputChanged(name, value)),
+    validateForm: event => dispatch(validateForm(event))
   }
 };
 
