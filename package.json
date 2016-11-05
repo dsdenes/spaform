@@ -8,6 +8,7 @@
   "dependencies": {
     "joi-browser": "^9.1.0",
     "lodash": "^4.16.4",
+    "material-ui": "^0.16.0",
     "moment": "^2.15.1",
     "pm2": "^2.0.18",
     "react": "^15.3.2",
