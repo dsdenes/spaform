@@ -11,7 +11,8 @@ module.exports = {
       email: false,
       occupation: false,
       birthday: false
-    }
+    },
+    occupations: []
   },
   api: {
     error: false
