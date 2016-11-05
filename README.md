@@ -1,6 +1,10 @@
+## Demo
+http://spaform-1.b8c41ed9.cont.dockerapp.io:32768/
+
 ## Deploy
 ```
-$ git clone https://github.com/dsdenes/spaform && cd spaform
+$ git clone https://github.com/dsdenes/spaform
+$ cd spaform
 $ npm install
 ```
 
