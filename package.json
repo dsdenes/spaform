@@ -36,7 +36,7 @@
     "serve-favicon": "^2.3.0"
   },
   "scripts": {
-    "production": "DEBUG=spaform:* ./node_modules/.bin/pm2 start ./src/api/bin/www --name spaform",
+    "production": "DEBUG=spaform:* ./node_modules/.bin/pm2 start ./src/api/bin/www --name spaform --no-daemon",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
