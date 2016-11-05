@@ -11,14 +11,14 @@ const InputAutoComplete = ({occupations, hintText, name, errorText, onChange}) =
     name={name}
     onNewRequest={onChange}
     onUpdateInput={onChange}
+    filter={(searchText, key) => searchText !== '' && (new RegExp(`.*${searchText}.*`, 'i')).test(key)}
     errorText={errorText}
     className="input-autocomplete"
   />
 );
 
 InputAutoComplete.defaultProps = {
-  occupations: [
-  ]
+  occupations: []
 };
 
 const mapStateToProps = (state, ownProps) => ({

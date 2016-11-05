@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Component } from 'react';
-import InputAutocomplete from '../componets/input-autocomplete/index';
+import OccupationInput from '../containers/occupation-input'
 import Input from '../componets/input/index';
 import DatePicker from '../componets/date-picker/index';
 import Button from '../componets/button/index';
@@ -27,10 +27,8 @@ class SPAForm extends Component {
         hintText="E-mail"
         errorText={errors.email}
       />
-      <InputAutocomplete
-        name="occupation"
-        hintText="Occupation"
-        errorText={errors.occupation}
+      <OccupationInput
+        inputChanged={inputChanged}
       />
       <DatePicker
         name="birthday"
