@@ -8,9 +8,11 @@ import Button from '../componets/button/index';
 import './spa-form.css';
 
 class SPAForm extends Component {
+import { inputChanged } from '../actions/form/input';
   render() {
     const {
       errors,
+      inputChanged,
     } = this.props;
 
     return (<form
@@ -20,12 +22,14 @@ class SPAForm extends Component {
         name="name"
         hintText="Name"
         errorText={errors.name}
+        onChange={event => inputChanged('name', event.target.value)}
       />
       <Input
         type="email"
         name="email"
         hintText="E-mail"
         errorText={errors.email}
+        onChange={event => inputChanged('email', event.target.value)}
       />
       <OccupationInput
         inputChanged={inputChanged}
@@ -34,6 +38,7 @@ class SPAForm extends Component {
         name="birthday"
         hintText="Birthday"
         errorText={errors.birthday}
+        onChange={(event, date) => inputChanged('birthday', date)}
       />
       <Button
         text="Send form"
@@ -47,6 +52,13 @@ const mapStateToProps = (state, ownProps) => ({
   errors: state.form.errors,
 });
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    inputChanged: (name, value) => dispatch(inputChanged(name, value)),
+  }
+};
+
 export default connect(
   mapStateToProps,
+  mapDispatchToProps
 )(SPAForm);
