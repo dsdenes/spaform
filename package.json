@@ -6,6 +6,9 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "joi-browser": "^9.1.0",
+    "lodash": "^4.16.4",
+    "moment": "^2.15.1",
     "pm2": "^2.0.18",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
