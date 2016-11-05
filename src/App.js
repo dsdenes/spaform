@@ -14,6 +14,8 @@ const store = createStore(reducers, initialState, applyMiddleware(thunk));
 
 import Head from './componets/head/index'
 import SPAForm from './containers/spa-form'
+import Notification from './containers/notification-form';
+
 import './App.css';
 
 const App = ({title}) => (
@@ -22,6 +24,7 @@ const App = ({title}) => (
       <div className='container'>
         <Head title={title} />
         <SPAForm/>
+        <Notification />
       </div>
     </Provider>
   </MuiThemeProvider>

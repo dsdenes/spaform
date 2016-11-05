@@ -15,5 +15,11 @@ export default {
   },
   api: {
     error: false
+  },
+  notification: {
+    form: {
+      successful: true,
+      open: false
+    }
   }
 };
