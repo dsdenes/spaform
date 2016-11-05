@@ -7,3 +7,10 @@ export function inputChanged(name, value) {
     value
   };
 }
+
+export function occupationListFetched(occupations) {
+  return {
+    type: actionNames.OCCUPATION_LIST_FETCHED,
+    occupations
+  };
+}
