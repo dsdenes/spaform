@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   form: {
     errors: {
       name: false,
