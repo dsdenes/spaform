@@ -7,8 +7,9 @@ import DatePicker from '../componets/date-picker/index';
 import Button from '../componets/button/index';
 import './spa-form.css';
 
-class SPAForm extends Component {
 import { inputChanged } from '../actions/form/input';
+
+export class SPAForm extends Component {
   render() {
     const {
       errors,
