@@ -2,6 +2,9 @@
   "name": "spaform",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=6.2.0"
+  },
   "devDependencies": {
     "react-scripts": "0.6.1"
     "enzyme": "^2.5.1",
@@ -15,7 +18,10 @@
     "moment": "^2.15.1",
     "pm2": "^2.0.18",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
   },
   "scripts": {
     "production": "DEBUG=spaform:* ./node_modules/.bin/pm2 start ./src/api/bin/www --name spaform",
