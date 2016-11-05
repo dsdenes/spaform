@@ -13,6 +13,7 @@
     "redux-mock-store": "^1.2.1",
   },
   "dependencies": {
+    "bottlejs": "^1.5.0",
     "joi-browser": "^9.1.0",
     "lodash": "^4.16.4",
     "material-ui": "^0.16.0",
